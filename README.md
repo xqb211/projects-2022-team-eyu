@@ -1,9 +1,9 @@
-# \[Group name\]
+# \[Team EYU\]
 
 **Group members:**
-- A
-- B
-- C
+- Yansi Wu
+- Elias Mika
+- Urs Eichenberger
 
 This repository contains  
 1. Inaugural project. 
