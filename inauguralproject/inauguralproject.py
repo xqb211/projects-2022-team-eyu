@@ -1,3 +1,6 @@
+import numpy as np
+from scipy import random
+
 def u(z, v = -2):
     """
     Args:
@@ -78,3 +81,43 @@ def u_ins_pi(q, pi, x=0.6, y = 1, p = 0.2, v = -2):
     """
     
     return p*u(y-x+q-pi) + (1-p)*u(y-pi)
+
+
+
+def v(gamma, pi):
+    """
+
+    calculate utility for given gamma and pi
+
+    Args:
+    
+        gamma: input float coverage ratio
+        pi: input float for price of insurance
+
+        
+    Returns:
+    
+        utility value of  being insured with a given pi and gamma
+    
+    """
+    # array of zeros of length N
+    a = 2
+    b = 7
+    N = 10000
+    x = np.zeros(N)
+
+    # iterating over each Value of x and filling it with a random value in beta distribution (a,b)
+    np.random.seed(123)
+    for i in range (len(x)):
+        x[i] = random.beta(a,b)
+
+    #create integral to store utility
+    integral = 0
+
+    for i in x:
+        y = 1
+        z = y - (1 - gamma)*i - pi
+        integral += u(z, v=-2)
+    
+    ans = 1/N*integral 
+    return ans  
