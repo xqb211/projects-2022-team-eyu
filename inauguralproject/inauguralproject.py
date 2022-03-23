@@ -34,7 +34,7 @@ def u_unins(x, y = 1, p = 0.2):
     return p*u(y-x) + (1-p)*u(y)
 ###################################################################
 
-def u_ins(q, x=0.5, y = 1, p = 0.2, v = -2):
+def u_ins(q, x, y = 1, p = 0.2, v = -2):
     """
 
     calculates utility value if being insured
