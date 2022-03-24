@@ -3,6 +3,8 @@ from scipy import random
 
 def u(z, v = -2):
     """
+    calculates a utility level given input z and curvature parameter v
+
     Args:
     
         z: input float on which utility function should be applied on
@@ -80,7 +82,7 @@ def u_ins_pi(q, pi, x=0.6, y = 1, p = 0.2, v = -2):
     
     """
     
-    return p*u(y-x+q-pi) + (1-p)*u(y-pi)
+    return p*u(y-x+q-pi, v=v) + (1-p)*u(y-pi, v=v)
 
 
 
