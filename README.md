@@ -1,4 +1,4 @@
-# \[Team EYU\]
+# \Team EYU\
 
 **Group members:**
 - Yansi Wu
